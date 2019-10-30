@@ -1,5 +1,5 @@
 # BookinghouseRu
-Установка зависимостей
+Установка зависимостейя <br>
 npm install
 Запуск сборщика проекта Webpack 
 ng serve --open

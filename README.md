@@ -1,7 +1,7 @@
-# BookinghouseRu
-Установка зависимостейя <br>
-npm install
-Запуск сборщика проекта Webpack 
+# Bookinghouse
+## Установка зависимостей 
+npm install 
+## Запуск сборщика проекта Webpack 
 ng serve --open
-
+<br>
 URL: localhost:4200

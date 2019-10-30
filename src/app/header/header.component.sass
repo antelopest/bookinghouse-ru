@@ -1,37 +1,15 @@
 $colorLogo: #055cb8
 $colorText: #494848
+$colorCurrent: #0b5cb8
 $fontProximaNova: Proxima Nova, 'Helvetica Neue', sans-serif
 
-mat-toolbar
-  height: 55px
-  width: 100%
-  background-color: inherit
-
-nav
+// Grid
+.header-navigation
   width: 100%
   display: flex
   flex-direction: row
   justify-content: space-between
-  font-family: $fontProximaNova
-
-.header-logo
-  text-decoration: none
-  color: $colorLogo
-  font-size: 17px
-  font-weight: 700
-  letter-spacing: 0.1px
-  cursor: pointer
-
-.main-navigation li, .auth-action li
-  display: inline
-
-.main-navigation li a, .auth-action li a
-  cursor: pointer
-  font-family: $fontProximaNova
-  font-weight: lighter
-  font-size: 15px
-  letter-spacing: 0.2px
-  color: $colorText
+  align-items: center
 
 .header-logo
   flex: 2
@@ -39,14 +17,65 @@ nav
   justify-content: flex-start
   align-items: center
 
-.main-navigation
+.header-navigation-list
   flex: 3
   display: flex
-  justify-content: space-around
+  justify-content: flex-end
   align-items: center
+  align-content: center
+  li
+    margin: 0 25px
 
-.auth-action
+.header-auth
   flex: 2
   display: flex
   justify-content: flex-end
   align-items: center
+  li
+    margin-left: 25px
+
+// Custom
+mat-toolbar
+  height: 65px
+  width: 100%
+  background-color: inherit // Наследуем цвет у родителя
+
+.header-logo
+  text-decoration: none
+  color: $colorLogo
+  font-size: 17px
+  font-weight: 700
+  letter-spacing: 0.1px
+  font-family: $fontProximaNova
+  b
+    cursor: pointer
+
+.header-navigation-list, .header-auth
+  li
+    display: inline
+
+.header-navigation-list
+  li
+    a
+      cursor: pointer
+      font-family: $fontProximaNova
+      font-weight: 400
+      font-size: 14px
+      letter-spacing: 0.1px
+      color: $colorText
+      &:hover
+        color: $colorCurrent
+
+.header-auth
+  .button
+    color: $colorText
+    font-family: $fontProximaNova
+    font-weight: 400
+    font-size: 14px
+    text-decoration: none
+    outline: none !important
+    background-color: inherit
+    border: none
+    cursor: pointer
+    &:hover
+      color: $colorCurrent
